@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,26 +26,26 @@ img {
 
 <body>
 
-<img src="Hashi.jpg">
-<img src="Sevens.jpg">
-<img src="Sharly.jpg">
-<img src="Spicy xl.jpg">
-<img src="Maxi.jpg">
-<img src="Spicy chicken.jpg">
-<img src="Fellit chicken.jpg">
-<img src="Slider.jpg">
-<img src="Hot dog.jpg">
-<img src="Signature fries.jpg">
-<img src="Super fries.jpg">
-<img src="Cheese fries.jpg">
-<img src="CHESSE balls.jpg">
-<img src="Pop corn.jpg">
-<img src="Mozarilla.jpg">
-<img src="Onion rings.jpg">
-<img src="Wing spicy.jpg">
-<img src="Wings classic.jpg">
-<img src="Creme.jpg">
-<img src="Sauce.jpg">
+<img src="HASHI.png">
+<img src="SEVENS_BEEF.png">
+<img src="SHARLY_BURGER.png">
+<img src="SPICY_BEEF_XL.png">
+<img src="MAXI_CHICKEN.png">
+<img src="SPICY_CHICKEN.png">
+<img src="CHICKEN_FILLET.png">
+<img src="SLIDERS_BEEF.png">
+<img src="HOT_DOG.png">
+<img src="SIGNATURE_FRIES.png">
+<img src="SUPER_CRISPY_FRIES.png">
+<img src="FRIES_CHEESE.png">
+<img src="CHEESE_BALLS.png">
+<img src="CHICKEN_POP_CORN.png">
+<img src="MOZZARELLA.png">
+<img src="ONION_RINGS.png">
+<img src="SPICY_LEMON_WINGS.png">
+<img src="CLASSIC_CHICKEN_WINGS.png">
+<img src="CREME_1897_WHITE.png">
+<img src="SAUCES_MENU.png">
 
 <script>
 // منع التكبير
@@ -69,14 +68,10 @@ document.addEventListener('touchend', function(e) {
     lastTouchEnd = now;
 }, false);
 
-// ======================
 // النزول التلقائي
-// ======================
-
 let autoScroll = true;
 let scrollSpeed = 0.6;
 let idleTime = 10000;
-
 let lastInteraction = Date.now();
 
 function userInteracted() {
@@ -84,20 +79,12 @@ function userInteracted() {
     autoScroll = false;
 }
 
-[
-"touchstart",
-"touchmove",
-"mousedown",
-"wheel"
-].forEach(event => {
+["touchstart", "touchmove", "mousedown", "wheel"].forEach(event => {
     document.addEventListener(event, userInteracted, { passive: true });
 });
 
 setInterval(() => {
-
-    // بعد 10 ثواني بدون لمس
     if (!autoScroll && Date.now() - lastInteraction >= idleTime) {
-
         window.scrollTo({
             top: 0,
             behavior: "smooth"
@@ -106,20 +93,15 @@ setInterval(() => {
         setTimeout(() => {
             autoScroll = true;
         }, 2000);
-
     }
 
     if (autoScroll) {
-
         window.scrollBy(0, scrollSpeed);
 
-        // وصل للنهاية
         if ((window.innerHeight + window.scrollY) >= document.body.scrollHeight - 5) {
-
             autoScroll = false;
 
             setTimeout(() => {
-
                 window.scrollTo({
                     top: 0,
                     behavior: "smooth"
@@ -128,15 +110,10 @@ setInterval(() => {
                 setTimeout(() => {
                     autoScroll = true;
                 }, 2000);
-
             }, 3000);
-
         }
-
     }
-
-},20);
-
+}, 20);
 </script>
 
 </body>
